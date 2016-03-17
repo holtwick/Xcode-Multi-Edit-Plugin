@@ -89,8 +89,8 @@ static int kMultiEditContextKey;
 }
 
 -(void)setSubmenuKeyEquivalents{
-    [[multiEditSubmenu itemAtIndex:0] setKeyEquivalent:@"a"];
-    [[multiEditSubmenu itemAtIndex:0] setKeyEquivalentModifierMask:NSShiftKeyMask | NSAlternateKeyMask];
+    [[multiEditSubmenu itemAtIndex:0] setKeyEquivalent:@"g"];
+    [[multiEditSubmenu itemAtIndex:0] setKeyEquivalentModifierMask:NSControlKeyMask];
     
     [[multiEditSubmenu itemAtIndex:1] setKeyEquivalent:@"z"];
     [[multiEditSubmenu itemAtIndex:1] setKeyEquivalentModifierMask:NSShiftKeyMask | NSAlternateKeyMask];

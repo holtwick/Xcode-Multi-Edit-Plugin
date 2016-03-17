@@ -153,13 +153,13 @@
     containerView = [[NSView alloc] initWithFrame:rangeRect];
     [containerView setWantsLayer:YES];
     
-    CGColorRef bgColor = CGColorCreateGenericGray(1.0, 1.0);
+    CGColorRef bgColor = [NSColor alternateSelectedControlColor].CGColor; // CGColorCreateGenericGray(1.0, 1.0);
     [containerView.layer setBackgroundColor:bgColor];
-    CGColorRelease(bgColor);
+    //CGColorRelease(bgColor);
     
-    CGColorRef borderColor = CGColorCreateGenericGray(0.0, 1.0);
+    CGColorRef borderColor = [NSColor alternateSelectedControlColor].CGColor; // CGColorCreateGenericGray(0.0, 1.0);
     [containerView.layer setBorderColor:borderColor];
-    CGColorRelease(borderColor);
+    //CGColorRelease(borderColor);
     
     [containerView.layer setBorderWidth:1.0];
     [containerView.layer setCornerRadius:2.0];

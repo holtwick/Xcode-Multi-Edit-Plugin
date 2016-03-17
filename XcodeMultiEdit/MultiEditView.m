@@ -14,13 +14,13 @@
     self = [super initWithFrame:frameRect];
     [self setWantsLayer:YES];
     
-    CGColorRef bgColor = CGColorCreateGenericGray(0.5, 0.3);
+    CGColorRef bgColor = [[NSColor alternateSelectedControlColor] colorWithAlphaComponent:0.3].CGColor; // CGColorCreateGenericGray(0.5, 0.3);
     [self.layer setBackgroundColor:bgColor];
-    CGColorRelease(bgColor);
+    //CGColorRelease(bgColor);
     
-    CGColorRef borderColor = CGColorCreateGenericGray(0.0, 1.0);
+    CGColorRef borderColor = [NSColor alternateSelectedControlColor].CGColor; //CGColorCreateGenericGray(0.0, 1.0);
     [self.layer setBorderColor:borderColor];
-    CGColorRelease(borderColor);
+    //CGColorRelease(borderColor);
 
     [self.layer setBorderWidth:1.0];
     [self.layer setCornerRadius:2.0];
